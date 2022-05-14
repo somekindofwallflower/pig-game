@@ -16,10 +16,18 @@ body {
     font-weight: 400;
     height: 100vh;
     color: #333;
-    background-image: linear-gradient(to top left, rgba(217, 159, 159, 0.6) 0%, rgba(81, 88, 133, 0.9) 100%);
+    /* background-image: linear-gradient(to top left, rgba(217, 159, 159, 0.6) 0%, rgba(81, 88, 133, 0.9) 100%); */
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+body::selection{ 
+    background-color: snow;
 }
 
 /* LAYOUT */
@@ -27,7 +35,7 @@ main {
     position: relative;
     width: 100rem;
     height: 60rem;
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: #1817172a;
     backdrop-filter: blur(200px);
     filter: blur();
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
@@ -43,28 +51,30 @@ main {
     flex-direction: column;
     align-items: center;
     transition: all 0.75s;
+    background-color: #16a2e6cf;
 }
 
 /* ELEMENTS */
 .name {
     position: relative;
-    font-size: 4rem;
+    font-size: 45px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    word-spacing: 2px;
-    font-weight: 300;
+    word-spacing: 1.5px;
+    font-weight: bold;
     margin-bottom: 1rem;
 }
 
 .score {
     font-size: 8rem;
     font-weight: 300;
-    color: #c7365f;
+    color:black;
     margin-bottom: auto;
+    text-shadow: 1px 2px 2px white;
 }
 
 .player--active {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: #fffafaea;
 }
 .player--active .name {
     font-weight: 700;
@@ -78,7 +88,7 @@ main {
 }
 
 .current {
-    background-color: #c7365f;
+    background-color: #030303d8;
     opacity: 0.8;
     border-radius: 9px;
     color: #fff;
@@ -120,7 +130,7 @@ main {
 
     padding: 0.7rem 2.5rem;
     border-radius: 50rem;
-    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1.75rem 3.5rem rgba(255, 255, 255, 0.1);
 }
 
 .btn::first-letter {
