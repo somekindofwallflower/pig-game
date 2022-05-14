@@ -16,7 +16,11 @@ body {
     font-weight: 400;
     height: 100vh;
     color: #333;
-    background-image: linear-gradient(to top left, rgba(217, 159, 159, 0.6) 0%, rgba(81, 88, 133, 0.9) 100%);
+    /* background-image: linear-gradient(to top left, rgba(217, 159, 159, 0.6) 0%, rgba(81, 88, 133, 0.9) 100%); */
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,7 +74,7 @@ main {
 }
 
 .player--active {
-    background-color: #fffafad3;
+    background-color: #fffafaea;
 }
 .player--active .name {
     font-weight: 700;
